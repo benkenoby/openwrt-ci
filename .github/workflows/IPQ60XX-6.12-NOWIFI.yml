@@ -9,13 +9,13 @@ env:
   REPO_URL: https://github.com/LiBwrt/openwrt-6.x.git
   REPO_BRANCH: kernel-6.12
   CONFIG_FILE: configs/ipq60xx-6.12-nowifi.config
-  DIY_SCRIPT: diy-script.sh
-  CLASH_KERNEL: amd64
+  #DIY_SCRIPT: diy-script.sh
+  #CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
   FIRMWARE_TAG: IPQ60XX-6.12-NOWIFI
-  TZ: Asia/Shanghai
+  TZ: Europe/Budapest
 
 jobs:
   Build:
@@ -167,6 +167,7 @@ jobs:
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🌐 默认地址: 192.168.1.1
           - 🔑 默认密码: password
+          - mod: Benkenoby
           ### 🧊 固件版本
           - 固件内核版本：${{ env.VERSION_KERNEL }}
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
